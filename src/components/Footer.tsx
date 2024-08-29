@@ -18,7 +18,7 @@ export default function Footer() {
       // }}
     >
       <Container as={Stack} maxW={"6xl"} py={4} align="center">
-        <Text>© 2023 Vaibhav Arora. All rights reserved</Text>
+        <Text>© 2024 Karan Chhillar. All rights reserved</Text>
       </Container>
     </Box>
   );
