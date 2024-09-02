@@ -80,11 +80,12 @@ export default function Projects({
           </Stack>
           {categories.length > 1 && (
             <Center px={{ base: 2, md: 4 }}>
-              <ButtonGroup variant="outline">
+              <ButtonGroup variant="outline" display='flex' flexWrap='wrap' spacing="6px">
                 <Button
                   size={{ base: "xs", sm: "md" }}
                   colorScheme={selected === "All" ? `${color}` : "gray"}
                   onClick={() => handleSelected("All")}
+                  mb="6px"
                 >
                   All
                 </Button>
@@ -94,6 +95,7 @@ export default function Projects({
                     size={{ base: "xs", sm: "md" }}
                     colorScheme={selected === category ? `${color}` : "gray"}
                     onClick={() => handleSelected(category)}
+                    mb="6px"
                   >
                     {category}
                   </Button>
@@ -127,6 +129,7 @@ export default function Projects({
                             objectFit="cover"
                             src={project.image}
                             h={{ base: "12rem" }}
+                            w="100%"
                             fallbackSrc={defaultLogo}
                           />
                         </a>
@@ -135,10 +138,10 @@ export default function Projects({
                           objectFit="cover"
                           src={project.image}
                           h={{ base: "12rem" }}
+                          w="100%"
                           fallbackSrc={defaultLogo}
                         />
                       )}
-
                       <Stack>
                         <CardBody alignContent="left">
                           <Heading size={{ base: "sm", md: "md" }}>
